@@ -3,7 +3,7 @@
 pipeline{
 
       // agent any	
-    agent { label "slave1"}
+    agent { label "slave1"}     ## slave1- labels name
     
     
     stages {
@@ -20,7 +20,7 @@ pipeline{
 ######################## Scripted Syntax #################################
 
 
-node('Slave-1') {
+node('Slave-1') {        #Slave-1-- Node Name
 
         stage("Cloning git repository") {
             git branch: 'main', credentialsId: 'github_credentials', url: 'https://github.com/naveen-uppala/customer.git'
